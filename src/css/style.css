@@ -1,0 +1,170 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2e003e;
+    color: #e0b3ff;
+    text-align: center;
+    margin: 0;
+    padding-top: 80px;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    position: relative;
+    z-index: 2;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #f3d1ff;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #tempo {
+    font-size: 2em;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cora {
+    font-size: 2.5em;
+    color: #ff99ff;
+    animation: pulse 1.5s infinite;
+    position: relative;
+    z-index: 2;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  #btn-musica {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(92, 29, 109, 0.6);
+    color: #fbeaff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 0.9em;
+    cursor: pointer;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+  }
+  
+  #btn-musica:hover {
+    background-color: rgba(124, 59, 160, 0.8);
+  }
+  
+  .heart {
+    position: fixed;
+    top: -50px;
+    font-size: 20px;
+    color: #c38cec;
+    animation: fall 5s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+  
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #8a4ba4;
+    box-shadow: 0 0 10px #00000066;
+    transition: transform 0.3s ease;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.05);
+  }
+  
+  #lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  #lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+  }
+  
+  #fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.2em;
+    }
+  
+    #tempo {
+      font-size: 1.2em;
+      padding: 0 10px;
+    }
+  
+    .galeria {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  
+    #btn-musica {
+      padding: 6px 10px;
+      font-size: 0.8em;
+    }
+  
+    #lightbox-img {
+      max-width: 95%;
+      max-height: 80%;
+    }
+  
+    #fechar {
+      font-size: 1.5em;
+      top: 10px;
+      right: 15px;
+    }
+  }
+  
